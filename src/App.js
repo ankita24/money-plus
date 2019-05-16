@@ -1,13 +1,13 @@
-import React from 'react';
-import HomePage from './components/HomePage';
-import Login from './components/login';
-import Register from './components/register';
-import './App.css';
-import { Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import Dashboard from './components/DashBoard';
+import React from 'react';
+import { Route, Router, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
+import './App.css';
+import Dashboard from './components/dashboard';
+import HomePage from './components/homepage';
+import Login from './components/login';
 import Nav from './components/nav';
+import Register from './components/register';
 
 const App = props => {
   return (
