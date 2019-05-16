@@ -8,7 +8,7 @@ class Send extends Component {
   constructor() {
     super();
     this.state = {
-      money: 0,
+      money: '',
       user: ''
     };
     this.handleChange = this.handleChange.bind(this);
@@ -21,8 +21,12 @@ class Send extends Component {
   }
   handleClick() {
     const { money, user } = this.state;
-    if (money && user) {
+    if (money && money > 0 && user) {
       this.props.sendMoney(money, user);
+      this.setState({
+        money: '',
+        user: ''
+      });
     }
   }
   render() {
