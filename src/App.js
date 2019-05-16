@@ -14,7 +14,7 @@ const App = props => {
     <Router {...props} history={createBrowserHistory()}>
       <Nav />
       <Switch>
-        <Route exact path="/" component={Register} />
+        <Route exact path="/" component={HomePage} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/dashboard" component={Dashboard} />
