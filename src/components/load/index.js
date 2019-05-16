@@ -6,7 +6,7 @@ export class Load extends Component {
   constructor() {
     super();
     this.state = {
-      money: 0
+      money: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -19,8 +19,11 @@ export class Load extends Component {
   }
 
   handleClick() {
-    if (this.state.money) {
+    if (this.state.money && this.state.money > 0) {
       this.props.loadMoney(this.state.money);
+      this.setState({
+        money: ''
+      });
     }
   }
 
