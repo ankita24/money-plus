@@ -40,7 +40,7 @@ export class Load extends Component {
         </Form.Field>
 
         <Button type="submit" onClick={this.handleClick}>
-          Submit
+          Add
         </Button>
       </Form>
     );
