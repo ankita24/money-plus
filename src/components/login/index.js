@@ -3,7 +3,6 @@ import { Button, Form, Container, Grid, Header } from 'semantic-ui-react';
 
 import { connect } from 'react-redux';
 import { login } from '../../actions/user';
-import { throwStatement } from '@babel/types';
 
 class Login extends Component {
   constructor() {
@@ -30,6 +29,14 @@ class Login extends Component {
         password
       });
     }
+
+    setTimeout(() => {
+      if (this.props.user.isLoggedIn) {
+          this.props.history.push('/dashboard');
+      } else {
+        alert('Invalid password')
+      }
+    }, 0);
   }
 
   componentDidMount() {
