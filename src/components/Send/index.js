@@ -51,7 +51,7 @@ class Send extends Component {
         </Form.Field>
 
         <Button type="submit" onClick={this.handleClick}>
-          Submit
+          Send
         </Button>
       </Form>
     );
